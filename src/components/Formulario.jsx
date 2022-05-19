@@ -25,12 +25,12 @@ const Formulario = () => {
           value={categoria}
         >
           {
-            CATEGORIAS.map( categoria => (
+            CATEGORIAS.map( cat => (
               <MenuItem
-                key={categoria.value}
-                value={categoria.value}
+                key={cat.value}
+                value={cat.value}
               >
-                {categoria.label}
+                {cat.label}
               </MenuItem>
             ))
           }

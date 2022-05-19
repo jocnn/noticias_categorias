@@ -4,7 +4,11 @@ import Noticia from "./Noticia"
 
 const ListadoNoticias = () => {
   
-  const { noticias } = useNoticias()
+  const { noticias, totalNoticias } = useNoticias()  
+  //console.info(totalNoticias)
+  
+  const totalPaginas = Math.ceil(totalNoticias / 20)
+  //console.info(totalPaginas)
   
   return (
     <>
@@ -40,7 +44,7 @@ const ListadoNoticias = () => {
           marginY: 5
         }}
       >
-        <Pagination count={10} color='primary' />
+        <Pagination count={totalPaginas} color='primary' />
       </Stack>
     </>
   )
